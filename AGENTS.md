@@ -39,7 +39,7 @@ Ambiente e dependências
 
 Padrões por tipo de artefato (diretrizes gerais)
 
-- Documentos (.docx/.pdf): confirmar títulos, hierarquia de seções, cabeçalho/rodapé, margens e idioma. Validar quebras de página e listas. Para PDF, usar gerador do skill ou conversão controlada por script local.
+- Documentos (.docx/.pdf): confirmar títulos, hierarquia de seções, cabeçalho/rodapé, margens e idioma. Validar quebras de página e listas. 
 - Apresentações (.pptx): confirmar tema, paleta, tipografia e estrutura de slides; gerar slides com títulos claros e bullets curtos.
 - Planilhas (.xlsx): confirmar abas, colunas, formatos de número e validações; gerar fórmulas apenas quando solicitado; documentar suposições.
 - Outros skills: seguir o `SKILL.md` específico e manter entradas/saídas em `.local/work/` e `.local/out/`.
