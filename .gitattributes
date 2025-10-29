@@ -1,0 +1,29 @@
+# Normaliza finais de linha: mantém LF no repositório
+* text=auto eol=lf
+
+# Scripts de Windows com CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Scripts Unix com LF
+*.sh   text eol=lf
+*.bash text eol=lf
+*.zsh  text eol=lf
+
+# Arquivos binários comuns (sem conversão/diff)
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.pdf  binary
+*.zip  binary
+*.tar  binary
+*.gz   binary
+*.bz2  binary
+*.7z   binary
+*.exe  binary
+*.dll  binary
+*.lock binary
+
