@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+  width: 720pt;
+  height: 405pt;
+  margin: 0;
+  background: {{background_color}};
+  font-family: Arial, sans-serif;
+  color: {{text_color}};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frame {
+  width: 640pt;
+  padding: 32pt 38pt;
+  background: #FFFFFF;
+  border-radius: 24pt;
+  border: 1pt solid #D8DADD;
+}
+.tagline {
+  font-size: 12pt;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+  color: {{accent_color}};
+  margin-bottom: 10pt;
+}
+.accent {
+  width: 72pt;
+  height: 4pt;
+  background: {{primary_color}};
+  border-radius: 2pt;
+  margin-bottom: 16pt;
+}
+h2 {
+  font-size: 26pt;
+  margin: 0 0 16pt 0;
+}
+.columns {
+  display: flex;
+  gap: 18pt;
+}
+.left {
+  flex: 1.1;
+  background: #F7F9F6;
+  border-radius: 18pt;
+  border: 1pt solid #D8DADD;
+  padding: 16pt;
+}
+.left ul {
+  margin: 0 0 16pt 0;
+  padding-left: 18pt;
+}
+.left li {
+  font-size: 13pt;
+  line-height: 1.45;
+  margin-bottom: 8pt;
+}
+.left li:last-child {
+  margin-bottom: 0;
+}
+.data-list {
+  margin: 0;
+  padding-left: 16pt;
+}
+.data-list li {
+  font-size: 12pt;
+  line-height: 1.4;
+  margin-bottom: 6pt;
+}
+.data-list li:last-child {
+  margin-bottom: 0;
+}
+.right {
+  flex: 1;
+  border-radius: 18pt;
+  border: 1pt solid #D8DADD;
+  padding: 14pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFFFFF;
+}
+.right img {
+  max-width: 100%;
+  max-height: 260pt;
+}
+</style>
+</head>
+<body>
+  <div class="frame">
+    <p class="tagline">{{tagline}}</p>
+    <div class="accent"></div>
+    <h2>{{title}}</h2>
+    <div class="columns">
+      <div class="left">
+        <ul>
+          {{#bullets}}
+          <li>{{.}}</li>
+          {{/bullets}}
+        </ul>
+        {{#data_pairs}}
+        <ul class="data-list">
+          {{#pairs}}
+          <li>{{value}}</li>
+          {{/pairs}}
+        </ul>
+        {{/data_pairs}}
+      </div>
+      <div class="right">
+        {{#chart_image}}
+        <img src="{{chart_image}}" alt="Chart" />
+        {{/chart_image}}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

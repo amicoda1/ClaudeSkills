@@ -1,0 +1,80 @@
+brand: valmet
+layout: 16x9
+output:
+  web_dir: .local/out/decks/linear-regression
+  pptx_file: .local/out/presentation/linear-regression-valmet.pptx
+slides:
+  - type: cover
+    tagline: Valmet Insights
+    title: Linear Regression Made Simple
+    subtitle: Understanding predictive lines with real-world examples
+  - type: agenda
+    tagline: Flow
+    title: What We'll Cover
+    items:
+      - Why linear regression matters
+      - How the method works
+      - Step-by-step example
+      - Reading the results
+  - type: two-column
+    tagline: Why Linear Regression?
+    title: Turning past data into simple predictions
+    left:
+      - heading: Draw the best line
+        text: Regression picks the straight line that stays closest to every dot.
+      - heading: Explain change quickly
+        text: When inputs move, the model forecasts outcomes in seconds.
+    right:
+      - heading: Share across teams
+        text: Uma única equação mantém operações, finanças e sustentabilidade alinhadas.
+  - type: section
+    tagline: Method
+    title: From Data Points to Prediction
+  - type: two-column
+    tagline: Plain Language
+    title: The Line in Plain Words
+    left:
+      - heading: Intercept
+        text: Prediction when the input equals zero.
+      - heading: Residuals
+        text: Regression keeps the average gap between dot and line small.
+    right:
+      - heading: Slope
+        text: How much the prediction changes per input unit.
+      - heading: Equation
+        text: Prediction = intercept + slope × input.
+  - type: example
+    tagline: Mini Example
+    title: Machine Temperature vs. Energy Use
+    bullets:
+      - Each extra °C adds ~10 kWh.
+      - Dots stay close to the fitted line.
+      - Forecast at 23 °C with confidence.
+    chart_image: assets/linear-regression-chart.png
+    data_pairs:
+      - [18, 220]
+      - [20, 240]
+      - [22, 260]
+      - [24, 280]
+  - type: interpret
+    tagline: Interpretation
+    title: Reading the Results
+    items:
+      - Slope mostra o ritmo de mudança por unidade de entrada.
+      - Intercept ancora comparações entre diferentes ativos.
+      - R-squared indica o quão próximo os pontos estão da linha.
+    highlight:
+      title: Confidence cue
+      text: Stay confident quando R² ficar acima de 0.90 e reavalie se cair.
+  - type: checklist
+    tagline: Checklist
+    title: Takeaways Before You Try
+    items:
+      - Confirm the relationship looks roughly linear before fitting.
+      - Watch for outliers — they can tilt the slope.
+      - Keep units consistent so the slope makes sense.
+      - Stay within the observed range unless you validate extrapolations.
+  - type: qna
+    tagline: Wrap Up
+    title: Questions?
+    subtitle: Ready to explore linear models together.

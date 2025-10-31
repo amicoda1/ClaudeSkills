@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+  width: 720pt;
+  height: 405pt;
+  margin: 0;
+  background: {{background_color}};
+  font-family: Arial, sans-serif;
+  color: {{text_color}};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frame {
+  width: 600pt;
+  padding: 36pt 48pt;
+  background: #FFFFFF;
+  border-radius: 24pt;
+  border: 1pt solid #D8DADD;
+  box-shadow: 0pt 12pt 24pt rgba(76, 77, 79, 0.18);
+}
+.tagline {
+  font-size: 12pt;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+  color: {{accent_color}};
+  margin-bottom: 12pt;
+}
+.accent {
+  width: 72pt;
+  height: 4pt;
+  background: {{primary_color}};
+  border-radius: 2pt;
+  margin-bottom: 20pt;
+}
+h1 {
+  font-size: 38pt;
+  margin: 0 0 20pt 0;
+}
+p {
+  font-size: 16pt;
+  margin: 0;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+  <div class="frame">
+    <p class="tagline">{{tagline}}</p>
+    <div class="accent"></div>
+    <h1>{{title}}</h1>
+    <p>{{subtitle}}</p>
+  </div>
+</body>
+</html>

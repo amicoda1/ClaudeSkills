@@ -1,0 +1,25 @@
+{
+  "name": "pptx-valmet",
+  "version": "1.0.0",
+  "description": "Valmet presentation tooling",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "setup": "npm ci && npx playwright install chromium",
+    "web": "node scripts/build-web.js",
+    "pptx": "node scripts/to-pptx.js",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "mustache": "^4.2.0",
+    "playwright": "^1.56.1",
+    "pptxgenjs": "^4.0.1",
+    "sharp": "^0.34.4"
+  }
+}

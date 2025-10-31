@@ -1,0 +1,29 @@
+{
+  "font": {
+    "primary": "Arial",
+    "fallbacks": ["Helvetica", "sans-serif"]
+  },
+  "colors": {
+    "primary": "#50B948",
+    "primaryLight": "#96D591",
+    "charcoal": "#4C4D4F",
+    "lightGray": "#ECEDEF",
+    "accentBlue": "#008ABA",
+    "white": "#FFFFFF"
+  },
+  "spacing": {
+    "slidePadding": "36pt",
+    "sectionGap": "24pt",
+    "cardPadding": "18pt",
+    "accentBarWidth": "72pt",
+    "accentBarHeight": "4pt"
+  },
+  "radius": {
+    "card": "24pt",
+    "chip": "999pt"
+  },
+  "layout": {
+    "width": "720pt",
+    "height": "405pt"
+  }
+}

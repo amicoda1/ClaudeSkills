@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+  width: 720pt;
+  height: 405pt;
+  margin: 0;
+  background: {{background_color}};
+  font-family: Arial, sans-serif;
+  color: {{text_color}};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frame {
+  width: 620pt;
+  padding: 32pt 38pt;
+  background: #FFFFFF;
+  border-radius: 24pt;
+  border: 1pt solid #D8DADD;
+}
+.tagline {
+  font-size: 12pt;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+  color: {{accent_color}};
+  margin-bottom: 10pt;
+}
+.accent {
+  width: 72pt;
+  height: 4pt;
+  background: {{primary_color}};
+  border-radius: 2pt;
+  margin-bottom: 16pt;
+}
+h2 {
+  font-size: 26pt;
+  margin: 0 0 18pt 0;
+}
+ul {
+  margin: 0;
+  padding-left: 20pt;
+}
+li {
+  font-size: 14pt;
+  line-height: 1.5;
+  margin-bottom: 10pt;
+}
+li:last-child {
+  margin-bottom: 0;
+}
+.highlight {
+  margin-top: 20pt;
+  padding: 16pt;
+  border-radius: 18pt;
+  border: 1pt solid #D8DADD;
+  background: #F7F9F6;
+}
+.highlight h3 {
+  font-size: 18pt;
+  margin: 0 0 8pt 0;
+  color: {{primary_color}};
+}
+.highlight p {
+  font-size: 14pt;
+  margin: 0;
+  line-height: 1.45;
+}
+</style>
+</head>
+<body>
+  <div class="frame">
+    <p class="tagline">{{tagline}}</p>
+    <div class="accent"></div>
+    <h2>{{title}}</h2>
+    <ul>
+      {{#items}}
+      <li>{{.}}</li>
+      {{/items}}
+    </ul>
+    {{#highlight}}
+    <div class="highlight">
+      <h3>{{title}}</h3>
+      <p>{{text}}</p>
+    </div>
+    {{/highlight}}
+  </div>
+</body>
+</html>

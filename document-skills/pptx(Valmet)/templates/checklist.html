@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+  width: 720pt;
+  height: 405pt;
+  margin: 0;
+  background: {{background_color}};
+  font-family: Arial, sans-serif;
+  color: {{text_color}};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frame {
+  width: 620pt;
+  padding: 36pt 42pt;
+  background: #FFFFFF;
+  border-radius: 24pt;
+  border: 1pt solid #D8DADD;
+}
+.tagline {
+  font-size: 12pt;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+  color: {{accent_color}};
+  margin-bottom: 12pt;
+}
+.accent {
+  width: 72pt;
+  height: 4pt;
+  background: {{primary_color}};
+  border-radius: 2pt;
+  margin-bottom: 18pt;
+}
+h2 {
+  font-size: 28pt;
+  margin: 0 0 18pt 0;
+}
+ul {
+  margin: 0;
+  padding-left: 20pt;
+}
+li {
+  font-size: 16pt;
+  line-height: 1.5;
+  margin-bottom: 12pt;
+}
+li:last-child {
+  margin-bottom: 0;
+}
+</style>
+</head>
+<body>
+  <div class="frame">
+    <p class="tagline">{{tagline}}</p>
+    <div class="accent"></div>
+    <h2>{{title}}</h2>
+    <ul>
+      {{#items}}
+      <li>{{.}}</li>
+      {{/items}}
+    </ul>
+  </div>
+</body>
+</html>

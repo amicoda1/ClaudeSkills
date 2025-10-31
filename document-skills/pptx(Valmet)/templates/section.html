@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+  width: 720pt;
+  height: 405pt;
+  margin: 0;
+  background: {{background_color}};
+  font-family: Arial, sans-serif;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay {
+  width: 720pt;
+  height: 405pt;
+  background: {{primary_color}};
+  opacity: 0.9;
+}
+.content {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 0 60pt;
+}
+.tagline {
+  font-size: 12pt;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+  color: {{accent_color}};
+  margin-bottom: 16pt;
+}
+h2 {
+  font-size: 42pt;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="content">
+    <p class="tagline">{{tagline}}</p>
+    <h2>{{title}}</h2>
+  </div>
+</body>
+</html>
