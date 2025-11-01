@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+body {
+  width: 720pt;
+  height: 405pt;
+  margin: 0;
+  background: {{background_color}};
+  font-family: Arial, sans-serif;
+  color: {{text_color}};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frame {
+  width: 650pt;
+  padding: 40pt 36pt;
+  background: #FFFFFF;
+  border-radius: 24pt;
+  border: 1pt solid #D8DADD;
+  display: flex;
+  flex-direction: column;
+  gap: 18pt;
+}
+.tagline {
+  font-size: 12pt;
+  letter-spacing: 2pt;
+  text-transform: uppercase;
+  color: {{accent_color}};
+  margin: 0;
+}
+.accent {
+  width: 90pt;
+  height: 4pt;
+  background: {{primary_color}};
+  border-radius: 2pt;
+}
+h2 {
+  font-size: 28pt;
+  margin: 0;
+}
+.timeline {
+  display: flex;
+  gap: 14pt;
+}
+.step {
+  flex: 1;
+  position: relative;
+  background: #F7F9F6;
+  border-radius: 18pt;
+  border: 1pt solid #D8DADD;
+  padding: 18pt;
+  display: flex;
+  flex-direction: column;
+  gap: 8pt;
+}
+.step:before {
+  content: "";
+  position: absolute;
+  top: -14pt;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12pt;
+  height: 12pt;
+  border-radius: 50%;
+  background: {{primary_color}};
+}
+.step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: -9pt;
+  right: -7pt;
+  width: 14pt;
+  height: 2pt;
+  background: {{primary_color}};
+}
+.step-label {
+  font-size: 12pt;
+  font-weight: bold;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+  color: {{primary_color}};
+  margin: 0;
+}
+.step-title {
+  font-size: 18pt;
+  margin: 0;
+}
+.step-description {
+  font-size: 14pt;
+  line-height: 1.45;
+  margin: 0;
+}
+</style>
+</head>
+<body>
+  <div class="frame">
+    <p class="tagline">{{tagline}}</p>
+    <div class="accent"></div>
+    <h2>{{title}}</h2>
+    <div class="timeline">
+      {{#steps}}
+      <div class="step">
+        <p class="step-label">{{label}}</p>
+        <h3 class="step-title">{{title}}</h3>
+        <p class="step-description">{{description}}</p>
+      </div>
+      {{/steps}}
+    </div>
+  </div>
+</body>
+</html>
