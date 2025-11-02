@@ -85,7 +85,8 @@ function templateForType(type) {
     checklist: 'checklist.html',
     qna: 'qna.html',
     example: 'example.html',
-    interpret: 'interpret.html'
+    interpret: 'interpret.html',
+    timeline: 'timeline.html'
   };
   const tpl = map[type];
   if (!tpl) {
@@ -152,6 +153,16 @@ function slideContext(slide, tokens, helpers) {
 
   if (slide.type === 'section') {
     ctx.title = slide.title || '';
+  }
+
+  if (slide.type === 'timeline') {
+    ctx.steps = Array.isArray(slide.steps)
+      ? slide.steps.map((step) => ({
+          label: step.label || '',
+          title: step.title || '',
+          description: step.description || ''
+        }))
+      : [];
   }
 
   return ctx;
