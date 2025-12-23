@@ -1,8 +1,8 @@
-# AGENTS.md — ClaudeSkills (uso no Codex)
+# AGENTS.md — ClaudeSkills (Guia para Coding Agents)
 
 Escopo: todo este repositório local (`ClaudeSkills`).
 
-Objetivo: usar os skills deste repositório com o Codex de forma genérica (documentos, apresentações, planilhas, PDFs, automações etc.) sem modificar arquivos versionados. Todo artefato local deve ir para `.local/`.
+Objetivo: usar os skills deste repositório com qualquer Coding Agent (Codex, Claude Code, Gemini, Antigravity, etc.) de forma genérica (documentos, apresentações, planilhas, PDFs, automações etc.) sem modificar arquivos versionados. Todo artefato local deve ir para `.local/`.
 
 Princípios de operação
 
@@ -54,10 +54,10 @@ Observação
 
 `AGENTS.md` e `.local/` devem permanecer fora de commits. O ignore local já foi configurado em `.git/info/exclude`.
 
-Como usar no Codex (setup local)
+Como usar no seu Coding Agent (setup local)
 
-1) Mantenha este `AGENTS.md` versionado na raiz. Ele garante que o agente leia as instruções corretas ao abrir o repositório no Codex.
+1) Mantenha este `AGENTS.md` versionado na raiz. Ele garante que o agente leia as instruções corretas ao abrir o repositório.
 2) Execute `scripts\setup-local.ps1` em cada máquina para preparar a estrutura `.local/work` e `.local/out`. Use `-SetupDocTools` se quiser provisionar `.local\.venv` com bibliotecas para documentos, apresentações, planilhas e PDFs.
 3) Armazene specs em `.local/work/<skill>/specs/` e artefatos finais em `.local/out/<skill>/`. Essas pastas já estão listadas em `.gitignore` para evitar commits acidentais.
 4) Scripts auxiliares específicos podem ficar em `.local/tools/<skill>/`. Documente no chat quais pacotes foram instalados e para quê.
-5) Ao receber um pedido no Codex, identifique o skill adequado, valide escopo com o usuário e siga o `SKILL.md`/`README.md` correspondente antes da geração do arquivo.
+5) Ao receber um pedido no Agent, identifique o skill adequado, valide escopo com o usuário e siga o `SKILL.md`/`README.md` correspondente antes da geração do arquivo.
