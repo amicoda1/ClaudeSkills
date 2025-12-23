@@ -2,5 +2,7 @@
 .local/
 *.code-workspace
 .venv/
+.idea/
+.vscode/
 
 **/__pycache__/
